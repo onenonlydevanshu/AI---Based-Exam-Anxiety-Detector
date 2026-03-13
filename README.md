@@ -57,6 +57,22 @@ python data/generate_dataset.py
 python models/train.py
 ```
 
+### Optional: Download model on demand (lightweight repo mode)
+If the weights file is not in `model/bert_anxiety_model.pt`, you can download it when needed.
+
+Set a direct URL to the `.pt` file:
+
+```bash
+# Windows PowerShell
+$env:MODEL_DOWNLOAD_URL="https://your-host/path/bert_anxiety_model.pt"
+python download_model.py
+```
+
+The backend will also auto-attempt download at startup when all are true:
+- `MODEL_AUTO_DOWNLOAD` is not `0/false/no`
+- `MODEL_DOWNLOAD_URL` is set
+- local file `model/bert_anxiety_model.pt` is missing
+
 ### 5. Start the FastAPI backend
 ```bash
 python backend/main.py

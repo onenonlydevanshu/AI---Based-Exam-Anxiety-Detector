@@ -10,6 +10,15 @@ MODEL_DIR = os.path.join(BASE_DIR, "model")
 DATASET_PATH = os.path.join(DATA_DIR, "anxiety_dataset.csv")
 MODEL_PATH = os.path.join(MODEL_DIR, "bert_anxiety_model.pt")
 
+# Optional model download settings
+MODEL_DOWNLOAD_URL = os.getenv("MODEL_DOWNLOAD_URL", "").strip()
+MODEL_AUTO_DOWNLOAD = os.getenv("MODEL_AUTO_DOWNLOAD", "1").strip().lower() not in {
+	"0",
+	"false",
+	"no",
+}
+MODEL_DOWNLOAD_TIMEOUT = int(os.getenv("MODEL_DOWNLOAD_TIMEOUT", "300"))
+
 # Model settings
 MODEL_NAME = "bert-base-uncased"
 MAX_LENGTH = 128
