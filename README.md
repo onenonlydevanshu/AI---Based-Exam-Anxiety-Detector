@@ -1,5 +1,5 @@
 # AI-Based Exam Anxiety Detection System
-
+## Disclamer:This is the compressed code due to uploading issues (Sorry for that).
 An intelligent mental-wellness support system that identifies and categorizes exam-related anxiety from student text inputs using **BERT-based NLP**.
 
 ## Architecture
