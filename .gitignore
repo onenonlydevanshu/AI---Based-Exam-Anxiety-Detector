@@ -1,0 +1,15 @@
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Local model artifacts
+model/*.pt
+model/*.bin
+models/*.pt
+models/*.bin
+
+# Optional large generated artifacts
+data/*.csv
+datasets/*.csv
+*.zip
